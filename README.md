@@ -1,0 +1,2 @@
+# manager
+CEToolbox Screen Manager
