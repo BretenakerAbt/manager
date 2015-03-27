@@ -17,7 +17,12 @@
 manager - A screen manager for CEToolbox
 """
 
+import kivy
+
 from kivy.app import App
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.button import Button
+from kivy.uix.widget import Widget
 
 class ManagerApp(App):
     pass
