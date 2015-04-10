@@ -1,0 +1,107 @@
+ManagerScreen:
+	name: 'modeexpert'
+	
+	fullscreen: True
+	
+	GridLayout:
+		cols: 3
+		padding: 10
+		spacing: 10
+
+		Label:
+			text: "Capillary Length :"
+			id: ko
+			height: 0.5
+			size_hint_x: 0.5
+		
+		TextInput:		
+			height: 0.5
+			pos_hint: {'right': 0.5}
+			id: capillary
+				
+		Label:
+			text: "Length to window :"
+			height: 0.5
+			size_hint_x: 0.5
+		
+		TextInput:
+			height: 0.5
+			pos_hint: {'right': 0.5}
+			id: towindow
+		
+		Label:
+			text: "Inside diameter :"
+			height: 0.5
+			size_hint_x: 0.5
+	
+		TextInput:
+			height: 0.5
+			pos_hint: {'right': 0.5}
+			id: Idiameter
+	
+		Label:
+			text: "Pressure :"
+			height: 0.5
+			size_hint_x: 0.5
+		
+		TextInput:
+			height: 0.5
+			pos_hint: {'right': 0.5}
+			id: Pressure
+		
+		Label:		
+			text: "Time :"
+			height: 0.5
+			size_hint_x: 0.5
+		
+		TextInput:
+			height: 0.5
+			pos_hint: {'right': 0.5}
+			id: Time
+		
+		Label:
+			text: "Viscosity :"
+			height: 0.5
+			size_hint_x: 0.5
+		
+		TextInput:
+			height: 0.5
+			pos_hint: {'right': 0.5}
+			id: Viscosity
+	
+		Label:
+			text: "Concentration :"
+			height: 0.5
+			size_hint_x: 0.5
+	
+		TextInput:
+			height: 0.5
+			pos_hint: {'right': 0.5}
+			id: Concentration
+			
+		Label:
+			text: "Molecular weight :"
+			height: 0.5	
+			size_hint_x: 0.5
+					
+		TextInput:
+			height: 0.5
+			pos_hint: {'right': 0.5}
+			id: Molweight
+			
+		Button:
+			pos_hint: {'center_x': 0.2}
+			text: "Calculate"
+			
+		Button:
+			id: Resetbtn
+			pos_hint: {'center_x': 0.2}
+			text: "Reset"
+			on_press: capillary.text="100.0"
+			on_press: towindow.text="100.0"
+			on_press: Idiameter.text="50.0"
+			on_press: Pressure.text="30.0"
+			on_press: Time.text="10.0"
+			on_press: Viscosity.text="1.0"
+			on_press: Concentration.text="1.0"
+			on_press: Molweight.text="1 000.0"
