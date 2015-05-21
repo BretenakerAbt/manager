@@ -25,23 +25,43 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
 
-class ViscosityCalculatePopup(Popup):
-    pass
+
 
 class MenuScreen(Screen):
     pass
 
-class InjectionScreen(Screen):
+class ViscosityPopup(Popup):
     pass
+
+class InjectionPopup(Popup):
+    pass
+
+class ConductivityPopup(Popup):
+    pass
+
+class FlowPopup(Popup):
+    pass
+
+class InjectionScreen(Screen):
+    def show_injection_results(self):
+        self._popup = InjectionPopup()
+        self._popup.open()
 
 class ViscosityScreen(Screen):
-    pass
+    def show_viscosity_results(self):
+        self._popup = ViscosityPopup()
+        self._popup.open()
+
 
 class ConductivityScreen(Screen):
-    pass
+    def show_conductivity_results(self):
+        self._popup = ConductivityPopup()
+        self._popup.open()
 
 class FlowScreen(Screen):
-    pass
+    def show_flow_results(self):
+        self._popup = FlowPopup()
+        self._popup.open()
 
 class AboutScreen(Screen):
     pass
@@ -56,6 +76,7 @@ class ManagerApp(App):
         sm.add_widget(FlowScreen(name='flow'))
         sm.add_widget(AboutScreen(name='about'))
         return sm
+
 
 if __name__ == '__main__':
     ManagerApp().run()
